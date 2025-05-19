@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Floating Toolbar</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: transparent;
+        overflow: hidden;
+      }
+
+      #toolbar {
+        display: flex;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.95);
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+      }
+
+      #url-container {
+        margin-bottom: 10px;
+      }
+
+      #bookmarks-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="toolbar">
+      <div id="url-container">
+        <!-- URL bar will be injected here -->
+      </div>
+      <div id="bookmarks-container">
+        <!-- Bookmarks will be injected here -->
+      </div>
+    </div>
+
+    <script src="toolbar.js"></script>
+  </body>
+</html>

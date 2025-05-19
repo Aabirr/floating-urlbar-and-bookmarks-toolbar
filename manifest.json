@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "Floating Bookmark Toolbar",
+  "version": "1.0",
+  "description": "Creates a floating bookmark toolbar with URL bar that stays on top of web pages",
+  "permissions": [
+    "activeTab",
+    "bookmarks",
+    "history",
+    "tabs",
+    "browserSettings"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "commands": {
+    "toggle-toolbar": {
+      "suggested_key": {
+        "default": "Alt+Shift+B",
+        "mac": "Alt+Shift+B"
+      },
+      "description": "Toggle Floating Bookmark Toolbar"
+    }
+  },
+  "icons": {
+    "48": "icons/icon.png"
+  }
+}
